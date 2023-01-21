@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Explore - YouTube Clone</title>
+        <link rel="icon" type="image/x-icon" href="https://i.ibb.co/HXqtPwH/youtube-icon-new.png">
+    </head>
+    <body>
+        <header>
+            <div class="left_icons">
+                <div class="menu_icon">
+                    <button onclick="openNav()"><img src="https://i.ibb.co/N7BfKkj/menu-icon-2.png" alt="menu-icon" id="icon_color1" border="0"></button>
+                </div>
+                <div class="youtube_icon">
+                    <a href="index.html">
+                        <img src="https://i.ibb.co/hCdWPy6/youtube-new.png" alt="youtube-new" id="yt_logo" border="0"> 
+                        <img src="https://i.ibb.co/2tjHvxx/youtube.png" alt="youtube" id="icon_color31" border="0">
+                    </a>
+                    <span>Youtube Home</span>
+                </div>
+            </div>
+            <div class="search">
+                <div class="search_bar">
+                    <input type="text" placeholder="Search">
+                    <button type="submit" class="search_icon"><img src="https://i.ibb.co/nD03dP3/find.png" alt="find" id="icon_color32" border="0"></button>
+                </div>
+                <div class="voice_search">
+                    <img src="https://i.ibb.co/5RKMwCh/mic-icon.png" alt="mic-icon" id="icon_color2" border="0">
+                </div>
+            </div>
+            <div class="right_icons">
+                <div class="theme" onclick="theme_toggle()">
+                    <img src="https://i.ibb.co/8D0240B/moon.png" alt="moon" border="0" id="theme_icon">
+                </div>
+                <div class="add_video_icon">
+                    <img src="https://i.ibb.co/Ln2KpGX/add-video-icon.png" alt="add-video-icon" id="icon_color3" border="0">
+                </div>
+                <div class="bell_icon">
+                    <img src="https://i.ibb.co/9wm5C1v/bell-line-icon.png" alt="bell-line-icon" id="icon_color4" border="0">
+                </div>
+                <div class="profile">
+                    <img src="https://source.unsplash.com/random/35x35/?person" alt="#">
+                </div>
+            </div>
+        </header>
+        <div class="side_nav">
+            <div class="side_icons">
+                <a href="index.html">
+                    <div class="home_icon side_icon_div">
+                        <img src="https://i.ibb.co/ZSrfHTD/home.png" alt="home" id="icon_color5" border="0">
+                        <p>Home</p>
+                    </div>
+                </a>
+                <a href="explore.html">
+                    <div class="explore_icon side_icon_div">
+                        <img src="https://i.ibb.co/fXXqDmQ/explore.png" alt="explore" id="icon_color6" border="0">
+                        <p>Explore</p>
+                    </div>
+                </a>
+                <div class="shorts_icon side_icon_div">
+                    <img src="https://i.ibb.co/pRJ8mYM/shorts-icon.png" alt="shorts-icon" id="icon_color7" border="0">
+                    <p>Shorts</p>
+                </div>
+                <a href="subscriptions.html">
+                    <div class="subscriptions_icon side_icon_div">
+                        <img src="https://i.ibb.co/grXGVh7/subscriptions.png" alt="subscriptions" id="icon_color8" border="0">
+                        <p>Subscriptions</p>
+                    </div>
+                </a>
+                <div class="library_icon side_icon_div">
+                    <img src="https://i.ibb.co/qDwh2QZ/library.png" alt="library" id="icon_color9" border="0">
+                    <p>Library</p>
+                </div>
+            </div>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <div class="sidebar_options">
+                <a href="index.html">
+                    <div class="home_icon bar_div">
+                        <div class="icon_div">
+                            <img src="https://i.ibb.co/ZSrfHTD/home.png" alt="home" id="icon_color10" border="0">
+                        </div>
+                        <p>Home</p>
+                    </div>
+                </a>
+                <a href="explore.html">
+                <div class="explore_icon bar_div" style="background-color: var(--active-nav-color);">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/fXXqDmQ/explore.png" alt="explore" id="icon_color11" border="0">
+                    </div>
+                    <p>Explore</p>
+                </div>
+                </a>
+                <div class="shorts_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/pRJ8mYM/shorts-icon.png" alt="shorts-icon" id="icon_color12" border="0">
+                    </div>
+                    <p>Shorts</p>
+                </div>
+                <a href="subscriptions.html">
+                    <div class="subscriptions_icon bar_div">
+                        <div class="icon_div">
+                            <img src="https://i.ibb.co/grXGVh7/subscriptions.png" alt="subscriptions" id="icon_color13" border="0">
+                        </div>
+                        <p>Subscriptions</p>
+                    </div>
+                <a>
+                <hr>
+                <div class="library_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/qDwh2QZ/library.png" alt="library" id="icon_color14" border="0">
+                    </div>
+                    <p>Library</p>
+                </div>
+                <div class="history_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/fFzYmTR/history.png" alt="history" id="icon_color15" border="0">
+                    </div>
+                    <p>History</p>
+                </div>
+                <div class="your_video_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/VqVqHfq/your-video.png" alt="your-video" id="icon_color16" border="0">
+                    </div>
+                    <p>Your videos</p>
+                </div>
+                <div class="later_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/KX18dxW/later.png" alt="later" id="icon_color17" border="0">
+                    </div>
+                    <p>Watch later</p>
+                </div>
+                <div class="liked_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/3S9WGDP/like.png" alt="like" id="icon_color18" border="0">
+                    </div>
+                    <p>Liked videos</p>
+                </div>
+                <div class="more_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/5FTRPSn/arrow-down.png" alt="arrow-down" id="icon_color19" border="0">
+                    </div>
+                    <p>Show More</p>
+                </div>
+                <hr>
+                <div class="text_sub">
+                    SUBSCRIPTIONS
+                </div>
+                <div class="bar_div">
+                    <div class="icon_div profile_div">
+                        <img src="https://source.unsplash.com/random/25x25/?animal" alt="#">
+                    </div>
+                    <p>Channel name</p>
+                    <div class="live_red">
+                        <img src="https://i.ibb.co/CWqfjJb/live-red.png" alt="live-red" border="0">
+                    </div>
+                </div>
+                <div class="bar_div">
+                    <div class="icon_div profile_div">
+                        <img src="https://source.unsplash.com/random/25x25/?fruit" alt="#">
+                    </div>
+                    <p>Channel name</p>
+                    <div class="live_red">
+                        <img src="https://i.ibb.co/CWqfjJb/live-red.png" alt="live-red" border="0">
+                    </div>
+                </div>
+                <div class="bar_div">
+                    <div class="icon_div profile_div">
+                        <img src="https://source.unsplash.com/random/25x25/?bird" alt="#">
+                    </div>
+                    <p>Channel name</p>
+                    <div class="live_red">
+                        <div class="blue_dot">
+                        </div>
+                    </div>
+                </div>
+                <div class="bar_div">
+                    <div class="icon_div profile_div">
+                        <img src="https://source.unsplash.com/random/25x25/?person" alt="#">
+                    </div>
+                    <p>Channel name</p>
+                    <div class="live_red">
+                        <div class="blue_dot">
+                        </div>
+                    </div>
+                </div>
+                <div class="bar_div">
+                    <div class="icon_div profile_div">
+                        <img src="https://source.unsplash.com/random/25x25/?nature" alt="#">
+                    </div>
+                    <p>Channel name</p>
+                    <div class="live_red">
+                        <div class="blue_dot">
+                        </div>
+                    </div>
+                </div>
+                <div class="bar_div">
+                    <div class="icon_div profile_div">
+                        <img src="https://source.unsplash.com/random/25x25/?planets" alt="#">
+                    </div>
+                    <p>Channel name</p>
+                    <div class="live_red">
+                        <div class="blue_dot">
+                        </div>
+                    </div>
+                </div>
+                <div class="bar_div">
+                    <div class="icon_div profile_div">
+                        <img src="https://source.unsplash.com/random/25x25/?tech" alt="#">
+                    </div>
+                    <p>Channel name</p>
+                    <div class="live_red">
+                        <div class="blue_dot">
+                        </div>
+                    </div>
+                </div>
+                <div class="more_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/5FTRPSn/arrow-down.png" alt="arrow-down" id="icon_color20" border="0">
+                    </div>
+                    <p>Show 251 More</p>
+                </div>
+                <hr>
+                <div class="text_sub">
+                    EXPLORE
+                </div>
+                <div class="films_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/K01W88L/films.png" alt="films" id="icon_color21" border="0">
+                    </div>
+                    <p>Films</p>
+                </div>
+                <div class="gaming_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/sKL0WCB/gaming.png" alt="gaming" id="icon_color22" border="0">
+                    </div>
+                    <p>Gaming</p>
+                </div>
+                <div class="live_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/4VzwxFb/live.png" alt="live" id="icon_color23" border="0">
+                    </div>
+                    <p>Live</p>
+                </div>
+                <div class="fashion_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/H7Y538p/fashion.png" alt="fashion" id="icon_color24" border="0">
+                    </div>
+                    <p>Fashion & beauty</p>
+                </div>
+                <div class="learning_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/6WWPK1G/learning.png" alt="learning" id="icon_color25" border="0">
+                    </div>
+                    <p>Learning</p>
+                </div>
+                <div class="sport_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/QXM7cNZ/sport.png" alt="sport" id="icon_color26" border="0">
+                    </div>
+                    <p>Sport</p>
+                </div>
+                <hr>
+                <div class="text_sub">
+                    MORE FROM YOUTUBE
+                </div>
+                <div class="premium_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/hCdWPy6/youtube-new.png" alt="youtube-new" border="0">
+                    </div>
+                    <p>YouTube Premium</p>
+                </div>
+                <div class="creator_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/K5zQHSM/studio.png" alt="studio" border="0">
+                    </div>
+                    <p>Creator Studio</p>
+                </div>
+                <div class="music_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/KjFT0S0/music.png" alt="music" border="0">
+                    </div>
+                    <p>YouTube Music</p>
+                </div>
+                <div class="kids_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/7j6L6Bp/kids.png" alt="kids" border="0">
+                    </div>
+                    <p>YouTube Kids</p>
+                </div>
+                <div class="tv_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/XFkVCLL/tv.png" alt="tv" border="0">
+                    </div>
+                    <p>YouTube Tv</p>
+                </div>
+                <hr>
+                <div class="setting_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/gRfcHhK/setting.png" alt="setting" id="icon_color27" border="0">
+                    </div>
+                    <p>Setting</p>
+                </div>
+                <div class="report_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/5k2h6kb/report.png" alt="report" id="icon_color28" border="0">
+                    </div>
+                    <p>Report history</p>
+                </div>
+                <div class="help_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/h2wkwY2/help.png" alt="help" id="icon_color29" border="0">
+                    </div>
+                    <p>Help</p>
+                </div>
+                <div class="feedback_icon bar_div">
+                    <div class="icon_div">
+                        <img src="https://i.ibb.co/GnSHxM7/feedback.png" alt="feedback" id="icon_color30" border="0">
+                    </div>
+                    <p>Feedback</p>
+                </div>
+                <hr>
+                <div>
+                    <pre>
+     About  Press  Copyright
+     Contact us  Creator  Advertise
+     Developers
+        
+     Terms  Privacy  Policy  &  Safety
+     How  YouTube  works
+     Test  new  features
+    <p>© 2022 Google LLC</p></pre>
+                </div>
+            </div>
+        </div>
+        <div class="explore_content_top">
+            <div class="explore_tabs">
+                <div class="explore_tab_content">
+                    <div class="trending">
+                    <img src="https://i.ibb.co/HTccLZT/trending1.png" alt="trending1" border="0" class="trending_icon">
+                    </div>
+                    <h4>Trending</h4>
+                </div>
+            </div>
+            <div class="explore_tabs">
+                <div class="explore_tab_content">
+                    <div class="trending">
+                        <img src="https://i.ibb.co/PZ33rFw/music.png" alt="music" border="0" class="trending_music">
+                    </div>
+                    <h4>Music</h4>
+                </div>
+            </div>
+            <div class="explore_tabs">
+                <div class="explore_tab_content">
+                    <div class="trending">
+                        <img src="https://i.ibb.co/QCGG7py/film.png" alt="film" border="0" class="trending_films">
+                    </div>
+                    <h4>Films</h4>
+                </div>
+            </div>
+            <div class="explore_tabs">
+                <div class="explore_tab_content">
+                    <div class="trending">
+                        <img src="https://i.ibb.co/CWqfjJb/live-red.png" alt="live-red" border="0" class="trending_live">
+                    </div>
+                    <h4>Live</h4>
+                </div>
+            </div>
+            <div class="explore_tabs">
+                <div class="explore_tab_content">
+                    <div class="trending">
+                        <img src="https://i.ibb.co/F4xGHRM/gaming.png" alt="gaming" border="0" class="trending_gaming">
+                    </div>
+                    <h4>Gaming</h4>
+                </div>
+            </div>
+            <div class="explore_tabs">
+                <div class="explore_tab_content">
+                    <div class="trending">
+                        <img src="https://i.ibb.co/vXq4Vjy/news.png" alt="news" border="0" class="trending_news">
+                    </div>
+                    <h4>News</h4>
+                </div>
+            </div> 
+            <div class="explore_tabs">
+                <div class="explore_tab_content">
+                    <div class="trending">
+                        <img src="https://i.ibb.co/K5Fg3mn/sports.png" alt="sports" border="0" class="trending_sports">
+                    </div>
+                    <h4>Sports</h4>
+                </div>
+            </div>
+            <div class="explore_tabs">
+                <div class="explore_tab_content">
+                    <div class="trending">
+                        <img src="https://i.ibb.co/HBbfKXq/Idea-lightbulb-silhouette-svg.png" alt="bulb" border="0" class="trending_learning">
+                    </div>
+                    <h4>Learning</h4>
+                </div>
+            </div>
+            <div class="explore_tabs">
+                <div class="explore_tab_content">
+                    <div class="trending">
+                        <img src="https://i.ibb.co/ZhSxM2X/fashion.png" alt="fashion" border="0" class="trending_fashion">
+                    </div>
+                    <h4>Fashion & beauty</h4>
+                </div>
+            </div>
+        </div>
+        <div class="trending_videos">
+            <div class="trending_videos_text">
+                <p>Trending Videos</p>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail">
+                    <img src="https://picsum.photos/500/300?random=1">
+                    <span class="timestamp">4:15</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail shorts_back">
+                    <img src="https://source.unsplash.com/random/80x135/?fun" alt="#" class="shorts_img">
+                    <span class="timestamp shorts_text"><img src="https://i.ibb.co/8Mc5FW8/shorts.png" alt="shorts" border="0"> SHORTS</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail">
+                    <img src="https://source.unsplash.com/random/245x135/?game" alt="#">
+                    <span class="timestamp">7:13</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail shorts_back">
+                    <img src="https://source.unsplash.com/random/80x135/?art" alt="#" class="shorts_img">
+                    <span class="timestamp shorts_text"><img src="https://i.ibb.co/8Mc5FW8/shorts.png" alt="shorts" border="0"> SHORTS</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail">
+                    <img src="https://source.unsplash.com/random/245x135/?nature" alt="#">
+                    <span class="timestamp">9:37</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail shorts_back">
+                    <img src="https://source.unsplash.com/random/80x135/?king" alt="#" class="shorts_img">
+                    <span class="timestamp shorts_text"><img src="https://i.ibb.co/8Mc5FW8/shorts.png" alt="shorts" border="0"> SHORTS</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail shorts_back">
+                    <img src="https://source.unsplash.com/random/80x135/?war" alt="#" class="shorts_img">
+                    <span class="timestamp shorts_text"><img src="https://i.ibb.co/8Mc5FW8/shorts.png" alt="shorts" border="0"> SHORTS</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail">
+                    <img src="https://source.unsplash.com/random/245x135/?mobile" alt="#">
+                    <span class="timestamp">34:19</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail">
+                    <img src="https://picsum.photos/500/300?random=1">
+                    <span class="timestamp">4:15</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail shorts_back">
+                    <img src="https://source.unsplash.com/random/80x135/?fun" alt="#" class="shorts_img">
+                    <span class="timestamp shorts_text"><img src="https://i.ibb.co/8Mc5FW8/shorts.png" alt="shorts" border="0"> SHORTS</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail">
+                    <img src="https://source.unsplash.com/random/245x135/?game" alt="#">
+                    <span class="timestamp">7:13</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail shorts_back">
+                    <img src="https://source.unsplash.com/random/80x135/?art" alt="#" class="shorts_img">
+                    <span class="timestamp shorts_text"><img src="https://i.ibb.co/8Mc5FW8/shorts.png" alt="shorts" border="0"> SHORTS</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail">
+                    <img src="https://source.unsplash.com/random/245x135/?nature" alt="#">
+                    <span class="timestamp">9:37</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail shorts_back">
+                    <img src="https://source.unsplash.com/random/80x135/?king" alt="#" class="shorts_img">
+                    <span class="timestamp shorts_text"><img src="https://i.ibb.co/8Mc5FW8/shorts.png" alt="shorts" border="0"> SHORTS</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail shorts_back">
+                    <img src="https://source.unsplash.com/random/80x135/?war" alt="#" class="shorts_img">
+                    <span class="timestamp shorts_text"><img src="https://i.ibb.co/8Mc5FW8/shorts.png" alt="shorts" border="0"> SHORTS</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+            <div class="explore_video">
+                <div class="explore_video_thumbnail">
+                    <img src="https://source.unsplash.com/random/245x135/?mobile" alt="#">
+                    <span class="timestamp">34:19</span>
+                </div>
+                <div class="explore_video_detail">
+                    <p class="v_title explore_v_title">This is the Video Title for the Youtube Video</p>
+                    <p class="c_name">Channel Name <img src="https://i.ibb.co/d5TbbGD/yt-verified.png" alt="yt-verified" border="0"> &nbsp; 1.6M views • 1 day ago</p>
+                    <p class="c_name trending_video_detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Mollitia laborum aspernatur eaque facilis placeat omnis. 
+                        Facere odio, excepturi hic quaerat eligendi voluptas incidunt 
+                        blanditiis magni veniam aut ullam assumenda maiores!</p>
+                </div>
+            </div>
+        </div>
+        <script src="indexjs.js" type="text/javascript">
+
+        </script>
+    </body>
+</html>
